@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/AceBank/css/navbar-home.css">
+    <link rel="stylesheet" type="text/css" href="/AceBank/css/account.css">
+    <title>Account Settings</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="logo-text">Ace<span class="bank">Bank</span></h1>
+        <!-- Navigation toggle -->
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label">
+            <img src="images\menu-24px.svg">
+        </label>
+        <nav>
+            <ul>
+            	<!-- Using Home.jsp directly instead of Home controller because it gives a blank page otherwise -->
+                <li><a href="Home.jsp">Home</a></li>
+                <li><a href="index.html" class="login-btn">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!--  -->
+    <div class="container">
+        <main class="settings-container">
+            <div class="title-container">
+                <h1>Change Password</h1>
+                <small>Password should at least be 10 characters long</small>
+            </div>
+            <div class="change-container">
+                <form action="Account" id="pass-form">
+
+                    <div class="form-control">
+                        <label>Enter New Password</label>
+                        <input type="text" name="pass1" id="pass1" placeholder="Password" onfocusout="validatePassword1()">
+                        <i class="material-icons" id="correct">check_circle</i>
+                        <i class="material-icons" id="error">error</i>
+                        <small>Error message</small>
+                    </div>
+                    <div class="form-control">
+                        <label>Confirm New Password</label>
+                        <input type="text" name="pass2" id="pass2" placeholder="Password" onfocusout="validatePassword2()">
+                        <i class="material-icons" id="correct">check_circle</i>
+                        <i class="material-icons" id="error">error</i>
+                        <small>Error message</small>
+                    </div>
+                    <input type="submit">
+                </form>
+            </div>
+        </main>
+    </div>
+    <script defer src="/AceBank/javascript/account.js" type="text/javascript"></script>
+</body>
+
+</html>

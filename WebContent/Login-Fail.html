@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/AceBank/css/login.css">
+    <title>Login</title>
+</head>
+
+<body>
+    <div class="main">
+        <header>
+            <h1><a href="index.html">Ace<span>Bank</span> </a></h1>
+            <div>
+                <a href="index.html">Home</a>
+                <a href="signup.html">Sign Up</a>
+            </div>
+        </header>
+        <div class="align-center">
+            <div class="login-container">
+
+                <div class="container">
+                    <!--Left Image-->
+                    <figure></figure>
+
+                    <div class="login">
+                        <h1>Log In</h1>
+                        <p>Wrong ID or Password, please try again.</p>
+                        <form action="Login" id="login-form">
+                            <!--Form Begin-->
+
+                            <div class="form-control">
+                                <input type="text" name="customerID" id="cutomer_id" placeholder="Customer ID"
+                                    onfocusout="validateCustomerID()" />
+                                <i class="material-icons" id="correct">check_circle</i>
+                                <i class="material-icons" id="error">error</i>
+                                <small>Error message</small>
+                            </div>
+
+
+                            <div class="form-control">
+                                <input type="password" name="password" id="password" placeholder="Password"
+                                    onfocusout="validatePassword()" />
+                                <i class="material-icons" id="correct">check_circle</i>
+                                <i class="material-icons" id="error">error</i>
+                                <small>Error message</small>
+                            </div>
+
+                            <input type="submit" id="submitter" value="Log in" />
+                        </form>
+                        <!--Sign up form end-->
+
+                        <div class="forgot-password">
+                            <a class="forgot" href="Forgot.html">Forgot Customer ID or Password?</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of align container -->
+
+    </div>
+
+    <script defer src="/AceBank/javascript/login.js" type="text/javascript"></script>
+
+</body>
+
+</html>
